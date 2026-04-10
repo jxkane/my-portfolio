@@ -1,7 +1,11 @@
 function Hero() {
     return (
-        <section className="p-10">
-            <h1 className="text4x1">Hero Section</h1>
+        <section className="min-h-screen flex flex-col justify-center items-center text-center p-10">
+            <h1 className="text-5xl font-bold mb-4">Jordan Kane</h1>
+            <p className="text-xl text-gray-600 mb-6">Medical Illustrator & Creative Developer</p>
+            <p className="text-lg text-gray-500 max-w-xl">
+                I create visual tools and interactive content for healthcare and life sciences. 
+            </p>
         </section>
     );
 }
