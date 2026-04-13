@@ -8,7 +8,7 @@ const projects = [
     {
         id: 2,
         title: "Pelvic Floor Anatomy Animation",
-        description: "Core and pelvic floor anatoomy animation.",
+        description: "Core and pelvic floor anatomy animation.",
         tags: ["Animation", "Medical Illustration"],
     },
     {
