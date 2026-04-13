@@ -15,7 +15,7 @@ const projects = [
         id: 3,
         title: "VisualMed Guide",
         description: "React Native offline medical patient information translation app for low-resource healthcare settings.",
-        tags: ["App Development", "Healthcare"],
+        tags: ["App Development", "Healthcare", "Medical Illustration"],
     }
 ];
 
