@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-dark-900 text-gray-100 min-h-screen">
+    <div className="bg-white text-gray-100 min-h-screen">
       <Navbar />
       <Hero />
       <About />
