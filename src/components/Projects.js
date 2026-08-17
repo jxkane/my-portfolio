@@ -1,7 +1,10 @@
 import projects from '../data/projects';
+import { useState } from 'react'; 
+import SvgGalleryModal from './SvgGalleryModal';
 
-
-function ProjectCards({ title, description, tags }) {
+function ProjectCards({ title, description, tags, link, onGalleryClick }) {
+    
+    
     return (
         <div className="border border-dark-700 bg-dark-800 rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
@@ -13,10 +16,28 @@ function ProjectCards({ title, description, tags }) {
                     </span>
                 ))}
             </div>
+
+            {link && (
+    
+               <a href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 bg-accent-400 text-dark-900 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-accent-300 transition-colors whitespace-nowrap ml-1 mt-5">View Live Demo</a>
+            )}
+
+            {onGalleryClick && (
+               <button
+                 onClick={onGalleryClick}
+                 className="inline-flex items-center gap-1 bg-accent-400 text-dark-900 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-accent-300 transition-colors mt-5">
+                View Gallery
+                </button>
+)}
+
         </div>
     );
 }
 function Projects () {
+    const [galleryOpen, setGalleryOpen] = useState(false);
     return (
         <section className="p-10" id="projects">
             <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
@@ -27,9 +48,12 @@ function Projects () {
                 title={project.title}
                 description={project.description}
                 tags={project.tags}
+                link={project.link}
+                onGalleryClick={project.id === 3 ? () => setGalleryOpen(true) : undefined}
                 />
                ))} 
             </div>
+        <SvgGalleryModal isOpen={galleryOpen} onClose={() => setGalleryOpen(false)} />
         </section>
     );
 }
