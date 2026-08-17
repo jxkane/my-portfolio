@@ -4,8 +4,7 @@ const projects = [
         title: "VisualMed Guide",
         description: "React Native offline medical patient information translation app for low-resource healthcare settings.",
         tags: ["App Development", "Healthcare", "Medical Illustration"],
-    }
-
+    },
     {
         id: 2,
         title: "Ethypharm HTML5 Video",
@@ -17,7 +16,7 @@ const projects = [
         title: "Pelvic Floor Anatomy Animation",
         description: "Core and pelvic floor anatomy animation.",
         tags: ["Animation", "Medical Illustration"],
-    },
+    }
     
 ];
 
