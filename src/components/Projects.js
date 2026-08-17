@@ -2,12 +2,26 @@ import projects from '../data/projects';
 import { useState } from 'react'; 
 import SvgGalleryModal from './SvgGalleryModal';
 
-function ProjectCards({ title, description, tags, link, onGalleryClick }) {
+
+
+
+function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc }) {
     
     
     return (
         <div className="border border-dark-700 bg-dark-800 rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
+            {videoSrc && (
+                    <video
+                        src={videoSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-70 object-cover rounded-lg mb-4 bg-dark-900"
+                    />
+)}
+
+            <h3 className="text-xl font-regular mb-2 text-white">{title}</h3>
             <p className="text-gray-400 mb-4">{description}</p>
             <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
@@ -40,7 +54,7 @@ function Projects () {
     const [galleryOpen, setGalleryOpen] = useState(false);
     return (
         <section className="p-10" id="projects">
-            <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
+            <h2 className="text-3xl font-regular mb-8 text-white">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                {projects.map ((project) => (
                 <ProjectCards
@@ -50,7 +64,7 @@ function Projects () {
                 tags={project.tags}
                 link={project.link}
                 onGalleryClick={project.id === 3 ? () => setGalleryOpen(true) : undefined}
-                />
+                videoSrc={project.videoSrc}/>
                ))} 
             </div>
         <SvgGalleryModal isOpen={galleryOpen} onClose={() => setGalleryOpen(false)} />

@@ -4,8 +4,8 @@ function Hero() {
             <div className="blob blob-1"></div>
             <div className="blob blob-2"></div>
             <div className="relative z-10">           
-            <h1 className="text-5xl font-bold mb-4 text-white">Jordan Kane</h1>
-            <p className="text-xl text-accent-400 mb-6">Design Engineer </p>
+            <h1 className="text-5xl mb-4 text-white tracking-wider">JORDAN KANE</h1>
+            <p className="text-xl text-accent-400 mb-6 tracking-wider">DESIGN ENGINEER </p>
             <p className="text-lg text-gray-400 max-w-xl">
                 I create visual tools and interactive content for healthcare and life sciences. 
             </p>

@@ -27,7 +27,7 @@ function SvgGalleryModal({ isOpen, onClose }) {
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6" onClick={onClose}>
             <div className="bg-dark-900 rounded-xl max-w-5xl w-full max-h-[85vh] overflow-y-auto p-6 scrollbar-hide" onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between items-center mb-6">
-                    <h3 className="text-2xl font-bold text-white">Interactive Clinical Procedure Maps <i>(Click to Expand)</i></h3>
+                    <h3 className="text-2xl font-regular text-white">Interactive Clinical Procedure Maps <i>(Click to Expand)</i></h3>
                     <button onClick={onClose} className="text-gray-400 hover:text-white text-2xl">×</button>
                 </div>
 
