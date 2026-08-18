@@ -9,7 +9,7 @@ function Contact() {
                 </h2>
 
                 <p className="text-gray-600 mb-8">
-                    Interested in working together? Drop me a message.
+                    Want me to make stuff? Drop me a message.
                 </p>
 
                 <div className="flex gap-6 justify-center" max-w-3xl mx-auto text-center>

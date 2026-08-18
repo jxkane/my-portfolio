@@ -2,7 +2,7 @@ const projects = [
     {
         id: 1,
         title: "VisualMed Guide",
-        description: "React Native offline medical patient information translation app for low-resource healthcare settings.",
+        description: "React Native offline medical patient information translation app for low-resource healthcare settings. (Still in development)",
         tags: ["App Development", "Healthcare", "Medical Illustration"],
         link: "https://visualmed-guide.vercel.app/",
         videoSrc: '/videos/visualmed-demo.mp4',
