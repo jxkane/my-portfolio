@@ -1,33 +1,34 @@
 
+ const skills = [ 
+    { name: "HTML" }, 
+    { name: "CSS" }, 
+    { name: "Tailwind" }, 
+    { name: "JavaScript" }, 
+    { name: "React" }, 
+    { name: "Node.js" }, 
+    { name: "Git" }, 
+    { name: "REST APIs" }, 
+    { name: "TypeScript" }, 
+    { name: "Adobe Illustrator" }, 
+    { name: "After Effects" }, ]; 
+    
+    function Skills() { 
+        return (
+             <section className="-mt-1 mb-80 overflow-hidden" id="skills"> 
+             <div className="marquee-track"> 
+                {[...skills, ...skills, ...skills].map((skill, index) => ( <span key={index} className="bg-gray-50 text-accent-400 border border-gray-200 px-4 py-1 rounded-full text-sm font-medium mx-2 whitespace-nowrap" > {skill.name} </span> ))} 
+                </div> 
+                </section> ); 
+                
+            
+            } 
+            
+            
+            
+            
+            export default Skills;    
+    
+    
 
-const skills = [
-  { name: "HTML", category: "Development" },
-  { name: "CSS", category: "Development" },
-  { name: "JavaScript", category: "Development" },
-  { name: "React", category: "Development" },
-  { name: "Adobe Illustrator", category: "Design" },
-  { name: "After Effects", category: "Animation" },
-  { name: "Procreate", category: "Illustration" },
-];
-    
-    
-    
-    
-    
-function Skills() {
-    return (
-        <section className="p-10 mb-80" id="skills">
-            <div className="flex flex-wrap gap-3">
-                {skills.map((skill) => (
-                    <span
-                    key={skill.name}
-                    className="bg-gray-50 text-accent-400  border border-gray-200 px-4 py-1 rounded-full text-sm font-medium">
-                        {skill.name}
-                    </span>
-                ))}
-            </div>
-        </section>
-    );
-}
 
-export default Skills;
+
