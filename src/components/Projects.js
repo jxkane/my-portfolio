@@ -2,16 +2,18 @@ import projects from '../data/projects';
 import { useState } from 'react'; 
 import SvgGalleryModal from './SvgGalleryModal';
 import PhoneFrame from './PhoneFrame';
+import CaseStudyModal from './CaseStudyModal';
+import Reveal from './Reveal';
 
 
 
 
-function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc, isPhone }) {
+function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc, isPhone, imageSrc, onCaseStudyClick }) {
     
     
     return (
     <div className="flex flex-col gap-8 items-center border-b border-gray-200 py-12">
-        <div className="w-full md:w-1/2 h-90 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden flex-shrink-0">
+        <div className="w-full md:w-1/2 h-90 flex items-center justify-center rounded-lg overflow-hidden flex-shrink-0">
             {videoSrc && isPhone && (
                 <PhoneFrame>
                     <video
@@ -34,6 +36,12 @@ function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc
                     className="max-w-md mx-auto h-full object-contain"
                 />
             )}
+            {imageSrc && ( 
+                <img 
+                src={imageSrc} 
+                alt={title} 
+                onClick={onCaseStudyClick} 
+                className="w-full h-full object-cover cursor-pointer" /> )} 
         </div>
 
         <div className="w-full md:w-1/2">
@@ -76,11 +84,13 @@ function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc
 }
 function Projects () {
     const [galleryOpen, setGalleryOpen] = useState(false);
+    const [caseStudyOpen, setCaseStudyOpen] = useState(false); 
     return (
         <section className="p-10" id="projects">
             <h2 className="text-3xl font-regular mb-8 text-gray-900">Projects</h2>
             <div className="grid grid-cols-1 gap-6">
-               {projects.map ((project) => (
+               {projects.map ((project, index) => (
+                 <Reveal key={project.id} delay={index * 0.15}>
                 <ProjectCards
                 key={project.id}
                 title={project.title}
@@ -89,10 +99,16 @@ function Projects () {
                 link={project.link}
                 onGalleryClick={project.id === 3 ? () => setGalleryOpen(true) : undefined}
                 videoSrc={project.videoSrc}
-                isPhone={project.id === 1}/>
+                isPhone={project.id === 1}
+                imageSrc={project.imageSrc} onCaseStudyClick={project.id === 2 ? () => setCaseStudyOpen(true) : undefined}/>
+                </Reveal>
                ))} 
             </div>
         <SvgGalleryModal isOpen={galleryOpen} onClose={() => setGalleryOpen(false)} />
+        <CaseStudyModal isOpen={caseStudyOpen} onClose={() => setCaseStudyOpen(false)} 
+        title="Interactive HTML5 Video" 
+        imageSrc="/images/html5-screenshot-blurred.png" 
+        caseStudy={projects.find(p => p.id === 2)?.caseStudy} /> 
         </section>
     );
 }

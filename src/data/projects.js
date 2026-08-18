@@ -12,6 +12,8 @@ const projects = [
         title: "Interactive HTML5 Video",
         description: "Fully compliant HTML5 video chapter player with offline iPad support, built for pharmaceutical client delivery.",
         tags: ["PWA", "Web Development", "Medical Comms"],
+        imageSrc: '/images/html5-thumbnail.png',
+        caseStudy: "PLACEHOLDER — replace with what you built, the technical challenge, and your role."
         
     },
     {

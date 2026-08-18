@@ -1,3 +1,5 @@
+import Reveal from './Reveal';
+
 const skills = [
   { name: "HTML", category: "Development" },
   { name: "CSS", category: "Development" },
@@ -15,7 +17,7 @@ const skills = [
 function Skills() {
     return (
         <section className="p-10" id="skills">
-            <h2 className="text-3xl font-regular mb-8 text-gray-900">Skills</h2>
+            <h2 className="text-3xl font-regular mb-8 text-gray-900"><Reveal>Skills</Reveal></h2>
             <div className="flex flex-wrap gap-3">
                 {skills.map((skill) => (
                     <span
