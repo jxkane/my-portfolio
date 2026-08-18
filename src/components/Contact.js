@@ -2,20 +2,33 @@ import Reveal from './Reveal';
 
 function Contact() {
     return (
-        <section className="p-10 max-w-3xl mx-auto text-center mt-80" id="contact">
-            <h2 className="text-3xl font-regular mb-6 text-gray-900"><Reveal>Get in Touch</Reveal></h2>
-            <p className="text-gray-600 mb-8">
-                Interested in working together? Drop me a message.
-            </p>
-            <div className="flex justify-center gap-6">
-                <a href="mailto:hello@visualmedguide.com" className="bg-accent-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-700">
-                    Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/jordan-kane-58719720a" target="_blank" rel="noopener noreferrer" className="border border=accent-500 text-accent-400 px-6 py-3 rounded-lg hover:bg-gray-50">
-                Linkedin
-                </a>
-                
-            </div>
+        <section className="p-10 max-w-5xl mx-auto" id="contact">
+            <Reveal>
+                <h2 className="text-3xl font-regular mb-6 text-gray-900">
+                    Get in Touch
+                </h2>
+
+                <p className="text-gray-600 mb-8">
+                    Interested in working together? Drop me a message.
+                </p>
+
+                <div className="flex gap-6">
+                    
+                       <a href="mailto:hello@visualmedguide.com"
+                        className="bg-accent-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-700"
+                    >
+                        Email Me
+                    </a>
+                    
+                       <a href="https://www.linkedin.com/in/jordan-kane-58719720a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-accent-500 text-accent-400 px-6 py-3 rounded-lg hover:bg-gray-50"
+                    >
+                        Linkedin
+                    </a>
+                </div>
+            </Reveal>
         </section>
     );
 }
