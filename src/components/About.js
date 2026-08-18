@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 
 function About() {
     return (
-        <section id="about" className="p-10 max-w-5xl mx-auto">
+        <section id="about" className="p-10 max-w-4xl">
             <Reveal>
                 <h2 className="text-3xl font-regular mb-6 text-gray-900">
                     About

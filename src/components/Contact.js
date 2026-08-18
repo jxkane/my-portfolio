@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 
 function Contact() {
     return (
-        <section className="p-10 max-w-5xl mx-auto" id="contact">
+        <section className="p-10 max-w-3xl mx-auto text-center mt-80" id="contact">
             <Reveal>
                 <h2 className="text-3xl font-regular mb-6 text-gray-900">
                     Get in Touch
@@ -12,7 +12,7 @@ function Contact() {
                     Interested in working together? Drop me a message.
                 </p>
 
-                <div className="flex gap-6">
+                <div className="flex gap-6 justify-center" max-w-3xl mx-auto text-center>
                     
                        <a href="mailto:hello@visualmedguide.com"
                         className="bg-accent-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-700"

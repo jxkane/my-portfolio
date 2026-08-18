@@ -74,7 +74,7 @@ function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc
                             loop
                             muted
                             playsInline
-                            className="max-w-md rounded-lg shadow-xl"
+                            className="max-w-2xl rounded-lg shadow-xl"
                         />
                     )}
 
@@ -83,7 +83,7 @@ function ProjectCards({ title, description, tags, link, onGalleryClick, videoSrc
                             src={imageSrc}
                             alt={title}
                             onClick={onCaseStudyClick}
-                            className="max-w-md rounded-lg shadow-xl cursor-pointer"
+                            className="max-w-2xl rounded-lg shadow-xl cursor-pointer"
                         />
                     )}
                 </div>
