@@ -5,12 +5,11 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import './App.css';
-import ScrollLine from './components/ScrollLine';
+
 
 function App() {
   return (
-    <div className="bg-white text-gray-100 min-h-screen relative">
-      
+    <div className="bg-white text-gray-100 min-h-screen relative"> 
       <Navbar />
       <Hero />
       <About />
