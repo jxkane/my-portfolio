@@ -1,4 +1,4 @@
-import Reveal from './Reveal';
+
 
 const skills = [
   { name: "HTML", category: "Development" },
