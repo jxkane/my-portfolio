@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 
 function About() {
   return (
-    <section id="about" className="p-10 max-w-3xl mx-auto">
+    <section id="about" className="p-10 max-w-3xl mx-auto mb-80">
       <h2 className="text-3xl font-regular mb-6 text-gray-900"><Reveal>About</Reveal></h2>
       <p className="text-gray-600 mb-4">
        I'm a Design Engineer with a background in medical illustration — I have an MSc in Medical Illustration and a Level 3 qualification in Software Development. I design and build interactive tools and interfaces for healthcare, pharma, and life sciences, combining clinical accuracy with hands-on frontend development.

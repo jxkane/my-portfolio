@@ -2,7 +2,7 @@ import Reveal from './Reveal';
 
 function Contact() {
     return (
-        <section className="p-10 max-w-3xl mx-auto text-center" id="contact">
+        <section className="p-10 max-w-3xl mx-auto text-center mt-80" id="contact">
             <h2 className="text-3xl font-regular mb-6 text-gray-900"><Reveal>Get in Touch</Reveal></h2>
             <p className="text-gray-600 mb-8">
                 Interested in working together? Drop me a message.
